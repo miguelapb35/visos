@@ -3,7 +3,7 @@
     <div :class="{ 'nav-open': NavbarStore.showNavbar }">
       <router-view name="header" />
       <div>
-        <transition name="router-anim" enter-active-class="animated pulse" leave-active-class="animated pulse">
+        <transition name="router-anim" enter-active-class="animated pulse" >
           <router-view />
         </transition>
       </div>

@@ -145,10 +145,10 @@ export default {
   margin-right: 0;
 }
 .der {
-  margin-left: 50px;
+ 
 }
 .itemPrice {
-  margin-left: 50px;
+  
 }
 #staggered-list-demo {
   justify-content: center;
@@ -174,7 +174,7 @@ export default {
   line-height: 18px;
 }
 .md-table-cell-container {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 li  {
   list-style-type: none;
@@ -211,6 +211,13 @@ li  {
   td {
     border-color: transparent;
   }
+
+@media all and (min-width: 768px) {
+.md-table-cell-container {
+  font-size: 1.5rem;
+  
+}
+}  
 
 @media all and (min-width: 991px) {
   .btn-container {
