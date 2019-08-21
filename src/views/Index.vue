@@ -18,91 +18,36 @@
           <md-table-toolbar>
             <h1 class="ti">Services</h1>
           </md-table-toolbar>
+          <div id="staggered-list-demo">
 
-          <md-table-row>
-            <md-table-head>Service</md-table-head>
-            <md-table-head>Price</md-table-head>
-          </md-table-row>
-
-          <md-table-row>
-            <md-table-cell>Kids hair cut</md-table-cell>
-            <md-table-cell md-numeric>$ 12 and up</md-table-cell>
-          </md-table-row>
-
-          <md-table-row>            
-            <md-table-cell>Mens hair cut</md-table-cell>
-            <md-table-cell md-numeric>$ 14 and up</md-table-cell>
-          </md-table-row>
-
-          <md-table-row>            
-            <md-table-cell>Women hair cut</md-table-cell>
-            <md-table-cell md-numeric>$ 16 and up</md-table-cell>
-          </md-table-row>
-
-          <md-table-row>            
-            <md-table-cell>Women color</md-table-cell>
-            <md-table-cell md-numeric>$ 58 and up</md-table-cell>
-          </md-table-row>
-
-          <md-table-row>
-            <md-table-cell>Women high light</md-table-cell>
-            <md-table-cell md-numeric>$ 55 and up</md-table-cell>
-          </md-table-row>  
-
-          <md-table-row>
-            <md-table-cell>Face Waxing of eye brows</md-table-cell>
-            <md-table-cell md-numeric>$ 10</md-table-cell>
-          </md-table-row>  
-
-          <md-table-row>
-            <md-table-cell>Lip</md-table-cell>
-            <md-table-cell md-numeric>$ 8</md-table-cell>
-          </md-table-row> 
-
-          <md-table-row>
-            <md-table-cell>Eye brows & lip</md-table-cell>
-            <md-table-cell md-numeric>$ 15</md-table-cell>
-          </md-table-row> 
+                  <input v-model="query" class="searchbox" placeholder="Type service here...">
             
-          <md-table-row>
-            <md-table-cell>Total face</md-table-cell>
-            <md-table-cell md-numeric>$ 45</md-table-cell>
-          </md-table-row>   
-          
-          <md-table-row>
-            <md-table-cell>Body waxing : Armpits</md-table-cell>
-            <md-table-cell md-numeric>$ 20 and up</md-table-cell>
-          </md-table-row>  
-
-          <md-table-row>
-            <md-table-cell>Bikini</md-table-cell>
-            <md-table-cell md-numeric>$ 20 and up</md-table-cell>
-          </md-table-row>          
-
-          <md-table-row>
-            <md-table-cell>Legs</md-table-cell>
-            <md-table-cell md-numeric>$ 50</md-table-cell>
-          </md-table-row> 
-
-          <md-table-row>
-            <md-table-cell>Half Legs</md-table-cell>
-            <md-table-cell md-numeric>$ 25</md-table-cell>
-          </md-table-row> 
-          <md-table-row>
-            <md-table-cell>Feet</md-table-cell>
-            <md-table-cell md-numeric>$ 15</md-table-cell>
-          </md-table-row> 
-          <md-table-row>
-            <md-table-cell>Make up</md-table-cell>
-            <md-table-cell md-numeric>$ 30</md-table-cell>
-          </md-table-row> 
-          <md-table-row>
-            <md-table-cell>Eyelash</md-table-cell>
-            <md-table-cell md-numeric>$ 15</md-table-cell>
-          </md-table-row> 
-
+            <transition-group
+              name="staggered-fade"
+              tag="ul"
+              v-bind:css="false"
+              v-on:before-enter="beforeEnter"
+              v-on:enter="enter"
+              v-on:leave="leave"
+            >
+              <md-table-row 
+                v-for="(item, index) in computedList"
+                v-bind:key="item.Service"
+                v-bind:price="item.Price"
+                v-bind:data-index="index" 
+              >
+                    
+                      <md-table-cell class="itemService">{{ item.Service }}</md-table-cell>      
+                      <div class="price">
+                        <md-table-cell md-numeric class="list-item der itemPrice">{{ item.Price }}</md-table-cell>
+                      </div>
+                      
+                              
+              </md-table-row>
+            </transition-group>          
+          </div>
         </md-table>
-      </div>
+      </div> 
     </div>
   </div>
 </template>
@@ -110,6 +55,7 @@
 <script>
 import Navigation from "./components/NavigationSection";
 import SmallNavigation from "./components/SmallNavigationSection";
+import { setTimeout } from 'timers';
 
 export default {
   components: {
@@ -129,16 +75,53 @@ export default {
       firstname: null,
       email: null,
       password: null,
-      leafShow: false
+      leafShow: false,
+      query: '',
+      list: [
+            { Service: 'Kids hair cut', Price: '$ 12 and up'  },
+            { Service: 'Mens hair cut', Price: '$ 14 and up' },
+            { Service: 'Women hair cut', Price: '$ 16 and up' },
+            { Service: 'Women color', Price : '$ 58 and up' },
+            { Service: 'Women high light', Price: '$ 55 and up' },        
+            { Service: 'Face Waxing of eye brows', Price: '$ 10' },        
+            { Service: 'Lip', Price: '$ 8' },        
+            { Service: 'Eye brows & lip', Price: '$ 15' },        
+            { Service: 'Total face', Price: '$ 45' },        
+            { Service: 'Body waxing : Armpits', Price: '$ 20 and up' },        
+            { Service: 'Bikini', Price: '$ 20 and up' },        
+            { Service: 'Legs', Price: '$ 50' },        
+            { Service: 'Half Legs', Price: '$ 25' },        
+            { Service: 'Feet', Price: '$ 15' },        
+            { Service: 'Make up', Price: '$ 30' },        
+            { Service: 'Eyelash', Price: '$ 15' },        
+                    
+      ]
     };
   },
   methods: {
-    leafActive() {
-      if (window.innerWidth < 768) {
-        this.leafShow = false;
-      } else {
-        this.leafShow = true;
-      }
+    beforeEnter: function (el) {
+      el.style.opacity = 0
+      el.style.height = 0
+    },
+    enter: function (el, done) {
+      var delay = el.dataset.index * 150
+      setTimeout(function () {
+        Velocity(
+          el,
+          { opacity: 1, height: '1.6em' },
+          { complete: done }
+        )
+      }, delay)
+    },
+    leave: function (el, done) {
+      var delay = el.dataset.index * 150
+      setTimeout(function () {
+        Velocity(
+          el,
+          { opacity: 0, height: 0 },
+          { complete: done }
+        )
+      }, delay)
     }
   },
   computed: {
@@ -146,11 +129,57 @@ export default {
       return {
         backgroundImage: `url(${this.image})`
       };
+    },
+    computedList: function () {
+      var vm = this
+      return this.list.filter(function (item) {
+        return item.Service.toLowerCase().indexOf(vm.query.toLowerCase()) !== -1
+      })
     }
   },
 };
 </script>
 <style lang="scss">
+.price {
+  justify-content: right;
+  margin-right: 0;
+}
+.der {
+  margin-left: 50px;
+}
+.itemPrice {
+  margin-left: 50px;
+}
+#staggered-list-demo {
+  justify-content: center;
+  display: grid;
+}
+.md-table-cell-container {
+  justify-content: right;
+}
+.searchbox {
+  justify-content: center;
+  border-radius: 5px;
+  margin-inline-start: 40px;
+  opacity: 0.9;
+  line-height: 24px;
+}
+.md-table .md-table-row td {
+  
+}
+.md-table-cell {
+  height: 48px;
+  position: relative;
+  transition: .3s cubic-bezier(.4,0,.2,1);
+  line-height: 18px;
+}
+.md-table-cell-container {
+  font-size: 1rem;
+}
+li  {
+  list-style-type: none;
+  margin-bottom: inherit;
+}
 .section-download {
   .md-button + .md-button {
     margin-left: 5px;
@@ -159,9 +188,28 @@ export default {
 .ti {
   color: #6d6b6b;
 }
-  .tabla{
-    width: 90%;
-    margin-left: 30px;
+.tabla {
+  width: 90%;
+  margin-left: 30px;
+}
+
+.list-item {
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 1s;
+    transform: opacity(0.5);    
+}
+
+.list-enter-active, .list-leave-active {
+    transition: all 1s;
+}
+
+.list-enter, .list-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
+  td {
+    border-color: transparent;
   }
 
 @media all and (min-width: 991px) {
@@ -174,8 +222,16 @@ export default {
   .ti {
     color: #6d6b6b;
   }
+td {
+  border-color: transparent;
+}
   .tabla{
     width: 90%;
   }
+  .md-table-cell-container {
+  font-size: 1.5rem;
+  
+}
+
 }
 </style>
