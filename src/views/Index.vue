@@ -183,7 +183,7 @@ li  {
 }
 .tabla {
   width: 90%;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .list-item {

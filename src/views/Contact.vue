@@ -143,7 +143,7 @@ export default {
 }
   .tabla{
     width: 90%;
-    margin-left: 30px;
+    margin-left: 10px;
   }
 
 @media all and (min-width: 991px) {
