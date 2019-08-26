@@ -144,12 +144,7 @@ export default {
   justify-content: right;
   margin-right: 0;
 }
-.der {
- 
-}
-.itemPrice {
-  
-}
+
 #staggered-list-demo {
   justify-content: center;
   display: grid;
@@ -164,9 +159,7 @@ export default {
   opacity: 0.9;
   line-height: 24px;
 }
-.md-table .md-table-row td {
-  
-}
+
 .md-table-cell {
   height: 48px;
   position: relative;
@@ -216,6 +209,11 @@ li  {
 .md-table-cell-container {
   font-size: 1.5rem;
   
+}
+}  
+@media all and (max-width: 400px) {
+input {
+  display: none;
 }
 }  
 
