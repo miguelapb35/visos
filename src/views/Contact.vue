@@ -88,7 +88,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/headerabout.jpg")
+      default: require("@/assets/img/visos-salon3.jpeg")
     }
   },
   data() {

@@ -32,15 +32,14 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Bertha Bravo
+                      Bertha
                       <br />
                       <small class="card-description text-muted">Stylist</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. 
+                        We all cut all kinds of hair 
                       </p>
                     </md-card-content>
                   </md-card>
@@ -51,23 +50,22 @@
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
-                        :src="img"
+                        src=@/assets/img/stylist-diana.jpeg
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
                       />
                     </div>
                     <h4 class="card-title">
-                      Bertha Bravo
+                      Diana
                       <br />
                       <small class="card-description text-muted"
-                        >Stylist</small
+                        >Color Expert</small
                       >
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members.
+                        We all cut all kinds of hair
                       </p>
                     </md-card-content>
                   </md-card>
@@ -78,21 +76,20 @@
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
-                        :src="img"
+                        src=@/assets/img/stylist-doris.jpeg
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
                       />
                     </div>
                     <h4 class="card-title">
-                      Bertha Bravo
+                      Doris
                       <br />
-                      <small class="card-description text-muted">Stylist</small>
+                      <small class="card-description text-muted">Color Expert</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. 
+                        We all cut all kinds of hair 
                       </p>
                     </md-card-content>
                   </md-card>
@@ -105,21 +102,20 @@
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
-                        :src="img"
+                        src=@/assets/img/stylist-mary.jpeg
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
                       />
                     </div>
                     <h4 class="card-title">
-                      Bertha Bravo
+                      Mary
                       <br />
                       <small class="card-description text-muted">Stylist</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. 
+                        We all cut all kinds of hair
                       </p>
                     </md-card-content>
                   </md-card>
@@ -145,8 +141,7 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members.
+                        We all cut all kinds of hair
                       </p>
                     </md-card-content>
                   </md-card>
@@ -170,8 +165,7 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. 
+                        We all cut all kinds of hair 
                       </p>
                     </md-card-content>
                   </md-card>

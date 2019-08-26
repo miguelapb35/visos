@@ -69,6 +69,22 @@
               </md-list-item>
 
               <md-list-item
+                target="_blank"
+              >
+                <router-link to="/contact">
+                  <p class="md-list-item-content">303 693 3089</p>
+                </router-link>           
+              </md-list-item>
+
+              <md-list-item
+                target="_blank"
+              >
+                <router-link to="/contact">
+                  <p class="md-list-item-content">303 693 0422</p>
+                </router-link>           
+              </md-list-item>
+
+  <!--             <md-list-item
                 href="#"
                 target="_blank"
               >
@@ -87,7 +103,7 @@
                 <md-tooltip md-direction="bottom"
                   >Follow us on Instagram</md-tooltip
                 >
-              </md-list-item>
+              </md-list-item> -->
             </md-list>
           </div>
         </div>
