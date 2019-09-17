@@ -6,7 +6,13 @@
           <div class="image-wrapper">
             <div class="brand">
               <h1>Visos Beauty Salon</h1>
-              <h3>W Hair, M Hair, EyeBrows, Eyelashes</h3>
+              <!-- <h3>W Hair, M Hair, EyeBrows, Eyelashes</h3> -->
+              <h4>
+                303 693 3089, 303 693 0422
+              </h4>
+              <p>
+                15433A E. Hampden Av. Aurora, Co, 80013
+              </p>
             </div>
           </div>
         </div>
@@ -67,7 +73,8 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/headerabout.jpg")
+      /* default: require("@/assets/img/headerabout.jpg") */
+      default: require("@/assets/img/vue-mk-header.jpg")
     }
   },
   data() {
@@ -140,6 +147,18 @@ export default {
 };
 </script>
 <style lang="scss">
+@media all and (max-width: 450px) {
+.brand h1 {
+  font-size: 1.5em;
+}
+h1 {
+  font-size: 1.2em;
+}
+} 
+
+.brand h1 {
+  font-size: 3.5em;
+}
 .price {
   justify-content: right;
   margin-right: 0;
@@ -211,11 +230,6 @@ li  {
   
 }
 }  
-@media all and (max-width: 400px) {
-input {
-  display: none;
-}
-}  
 
 @media all and (min-width: 991px) {
   .btn-container {
@@ -237,6 +251,5 @@ td {
   font-size: 1.5rem;
   
 }
-
 }
 </style>

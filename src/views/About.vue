@@ -3,30 +3,46 @@
     <parallax
       class="section page-header header-filter"
       :style="headerStyle"
-    ></parallax>
+    >
+      <div class="container">
+        <div class="md-layout">
+          <div class="md-layout-item"></div>
+          <div class="md-layout-item"></div>
+          <div class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100 der"
+          >
+              <h4>
+                303 693 3089, 303 693 0422
+              </h4>
+            <p>
+              15433A E. Hampden Av. Aurora, Co, 80013
+            </p>
+          </div>
+        </div>
+      </div>              
+    </parallax>
     <div class="main main-raised">
       <div class="section profile-content">
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-50 mx-auto">
               <div class="profile">
-                <div class="avatar">
+       <!--          <div class="avatar">
                   <img
                     :src="img"
                     alt="Circle Image"
                     class="img-raised rounded-circle img-fluid"
                   />
-                </div>
+                </div> -->
                 <div class="name">
                   <h3 class="title">Visos Beauty Salon</h3>
-                  <h6>About Us</h6>
+                  
                 </div>
               </div>
             </div>
           </div>
           <div class="description text-center">
             <p class="text">
-              Here at Obsessed Salon we strive to make sure we are well trained in hair, nails, and skin so that way your experience with us is a great one. We believe that a positive environment and positive staff equals happy guests. What makes our salon different from the rest ? We  believe that not only taking care of your hair at the salon, but feel that a good home care regime plays an important as well. So at Obsessed we strive to keep the costs of maintaining your style and integrity of your hair , but not to break the bank. If you are new to our salon please check out our package hair care systems for all hair types. We take pride in keeping our salon clean and well maintained for your health as well as ours. We keep up to date records of all cleaning from our foot baths to our restrooms and have them in areas for you to conveniently look at them. 
+              Welcome! Visos Beauty Salon strives to work in making a better version of you! Here at Visos we believe that your hair tells a story. As an important part of your image, your hair projects your identity, your beliefs and moods. We are committed on helping you discover the best version of you by providing you with the talent and technique from our expert stylists, who keep up with the latest trends and give you individual attention. As a Hispanic oriented business, we welcome clients from all cultures and all ages, creating a diverse atmosphere for which we are very proud off.
             </p>
           </div>
         </div>
@@ -43,8 +59,6 @@ export default {
   },
   bodyClass: "profile-page",
   data() {
-    return {
-    };
   },
   props: {
     header: {
@@ -67,6 +81,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media all and (max-width: 605px) {
+h4 {
+  font-size: 1.1rem;
+}
+}
+.der {
+  text-align: right;
+  margin-left: 200px;
+}
+.profile {
+  margin-top: 100px;
+}
+.description {
+  color: #5d5d5d;
+}
 .section {
   padding: 0;
 }

@@ -3,14 +3,16 @@
     <parallax class="section page-header header-filter" :style="headerStyle">
       <div class="container der">
         <div class="md-layout">
-          <div
-            class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
-          >
+          <div class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100">
             <h1 class="title">Our Stylists</h1>
-            <h4>
-              Take a look at our team
-            </h4>
-            <br />
+              <div class="md-layout-item"></div>
+              <div class="md-layout-item"></div>
+              <h4>
+                303 693 3089, 303 693 0422
+              </h4>
+            <p>
+              15433A E. Hampden Av. Aurora, Co, 80013
+            </p>
           </div>
         </div>
       </div>

@@ -20,9 +20,9 @@
               <h2 class="text-center title">303 693 3089</h2>
               <h2 class="text-center title">303 693 0422</h2>
               <h3 class="text-center title">15433A E. Hampden Av. Aurora, Co, 80013</h3>
-              <div class="mx-auto">
-                <img src="../assets/img/visos-salon.jpeg" alt="salon" class="text-center salon">
-              </div>  
+                      <div class="mx-auto text-center">
+                        <img src="../assets/img/visos-salon.jpeg" alt="salon" class="salon">
+                      </div>
                   <div class="tabla">
                     <md-table md-card>
                       <md-table-toolbar>
@@ -62,10 +62,11 @@
                         <md-table-cell>Sunday</md-table-cell>
                         <md-table-cell md-numeric>Closed</md-table-cell>
                       </md-table-row>
-
-  
                     </md-table>
-                  </div>      
+                  </div> 
+                  <div class="mx-auto text-center">   
+                    <img src="../assets/img/visos-salon3.jpeg" alt="salon" class="text-center salon">  
+                  </div>
             </div>
           </div>
         </div>
@@ -88,7 +89,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/visos-salon3.jpeg")
+      default: require("@/assets/img/vue-mk-header.jpg")
     }
   },
   data() {
@@ -136,7 +137,8 @@ export default {
   }
 }
 .salon {
-  max-width: 100%;
+  width: 100%;
+  max-width: 440px;
 }
 .ti {
   color: #6d6b6b;

@@ -36,13 +36,13 @@
                 >
                 </a>
               </li>
-              <md-list-item
+             <md-list-item
                 target="_blank"
               >
               <router-link to="/">
-                <p class="md-list-item-content">Home</p>
+                <p class="md-list-item-content">Visos</p>
               </router-link>           
-              </md-list-item>
+              </md-list-item> 
 
               <md-list-item
                 target="_blank"
@@ -67,7 +67,7 @@
                   <p class="md-list-item-content">Contact</p>
                 </router-link>           
               </md-list-item>
-
+  <!--
               <md-list-item
                 target="_blank"
               >
@@ -84,7 +84,7 @@
                 </router-link>           
               </md-list-item>
 
-  <!--             <md-list-item
+             <md-list-item
                 href="#"
                 target="_blank"
               >
